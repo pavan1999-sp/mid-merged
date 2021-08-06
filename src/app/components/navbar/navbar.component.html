@@ -1,0 +1,55 @@
+
+
+  <mat-toolbar color="primary">
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    
+  </button>
+  <span>easyshoping</span>
+  <span class="example-spacer"></span> 
+
+
+<div style="float: right;">
+
+  <button  mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+   <mat-icon   [routerLink]="['/cart']" >shoping_cart_icon</mat-icon>
+ </button>
+</div>
+</mat-toolbar>
+
+
+
+
+
+
+
+
+
+<mat-sidenav-container>
+
+
+
+  <mat-sidenav #sidenav>
+
+
+
+<app-side-navbar (closeSideNav)="sidenav.close()" ></app-side-navbar>
+
+  </mat-sidenav>
+
+
+
+  <mat-sidenav-content>
+
+      <app-subnav (SideNavToggle)="sidenav.toggle()"></app-subnav>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+    
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
