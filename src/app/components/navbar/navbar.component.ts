@@ -9,12 +9,21 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class NavbarComponent implements OnInit {
 
-  currentUser: any;
+  istoken:any
  
   constructor(private token:LoginService) { }
  
+islogout(){
+  this.token.logout()
+}
+gettoken(){
+  this.istoken=this.token.getToken()
+}
+  
   ngOnInit(): void {
-    this.currentUser = this.token.getToken();
+  
+  this.gettoken()
+   
   }
-
+  
 }

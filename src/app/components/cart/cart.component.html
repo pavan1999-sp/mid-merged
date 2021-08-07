@@ -10,11 +10,11 @@
                 <table class="table table-responsive">
                     <thead>
                         <tr>
-                            <th [style.width]="'350px'">Name</th>
+                            <th [style.width]="'300px'">Name</th>
                             <th [style.width]="'100px'">Quantity</th>
                             <th [style.width]="'100px'">Price</th>
-                            <th [style.width]="'150px'">Amount</th>
-                            <th [style.width]="'150px'"></th>
+                            <th [style.width]="'100px'">Amount</th>
+                            <th [style.width]="'100px'"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -40,17 +40,30 @@
                             <td>
                                 <!-- <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button> -->
                             </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                            <!-- <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td> -->
-                            <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                            <td><button class="btn btn-success">Checkout</button></td>
-                            <div id="amounter"> Total bill amount to be paid:  {{total  | number : '1.2-2' | currency:"USD"}} </div>
-                            <!-- <td><strong>Grand Total : ${{grandTotal}}</strong></td> -->
-                        </tr>
+                    
+                            
+                           
+                            
+                            
+                       
                     </tbody>
+                    
                 </table>
+
+<div>
+
+    <h4>Total bill amount to be paid:  {{total |currency  }}</h4>
+    
+                          
+                            <!-- <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td> --> <br>
+                            <button class="btn btn-success">Checkout</button> &nbsp;
+                            <button routerLink="/products" class="btn btn-primary">Shop More</button>
+</div>
+
+
+
+
+
             </div>
         </div>
     </div>

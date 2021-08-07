@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SideNavbarComponent } from './user/components/side-navbar/side-navbar.component';
+import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+
 import { UserModule } from './user/user.module';
 
 @Component({

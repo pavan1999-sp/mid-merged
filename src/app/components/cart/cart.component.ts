@@ -9,87 +9,72 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-total=0;
-cart:any;
-confirm:any
+  total = 0;
+  grandtotal:any;
+  cart: any;
+  confirm: any
 
-  constructor(private os:CartService) { }
- 
-change(val:any,id:any){
+  constructor(private os: CartService) { }
 
-  if(val.target.value==0){
+  change(val: any, id: any) {
 
-this.confirm=confirm("do you want confirm delet item")
-if(this.confirm==true){
+    if (val.target.value == 0) {
 
-  this.os.deleteitem(id).subscribe((posres)=>{
-    console.log(posres)
-    this.getcartitem();
-  
-    
-  })
- 
+      this.confirm = confirm("do you want confirm delet item")
+      if (this.confirm == true) {
+
+        this.os.deleteitem(id).subscribe((posres) => {
+          console.log(posres)
+          this.getcartitem();
 
 
-}
-else{
-  alert("ok")
-}
+        })
 
+      }
+      else {
+        alert("ok")
+      }
 
+    }
+
+    console.log(val.target.value)
+
+    console.log(id)
 
   }
 
-console.log(val.target.value)
-  
-console.log(id)
-
-}
 
 
 
 
-  
-  placeOrder(){
+  placeOrder() {
     console.log("It is called")
-    if(this.cart.length>0)
-    this.os.makeOrder();
+    if (this.cart.length > 0)
+      this.os.makeOrder();
     else
-    alert("cart is empty")
+      alert("cart is empty")
   }
 
-getcartitem(){
-    
-  this.os.getitem().subscribe((posres)=>{
+  getcartitem() {
+    this.os.getitem().subscribe((posres) => {
+      this.cart = posres
 
+      console.log(this.cart)
+      for (let x of this.cart) {
+       
+      this.total += x.quantity * x.price;
+        console.log(this.total)
+      }
+    }
+    )
 
-    this.cart=posres
-    
-
-
-   
-    for(let x of this.cart){
-      this.total+=this.cart.quantity*this.cart.price;
-      console.log(this.total)
-    } }
-  )
-
-}
-
-
-
-
+  }
 
 
   ngOnInit() {
 
-this.getcartitem();
-    
-  
+    this.getcartitem();
 
-     
   }
-
- 
 
 }

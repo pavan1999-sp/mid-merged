@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 import { LoginService } from 'src/app/services/login.service';
 
@@ -16,14 +17,21 @@ export class UserProfileComponent implements OnInit {
 
   constructor(private token:LoginService) { }
 
-  ngOnInit(): void {
-    this.unsplittedtoekn = localStorage.getItem("token") || '{}' ;
+logout(){
+  this.token.logout();
+}
+
+gettoken(){
+  this.unsplittedtoekn = localStorage.getItem("token") || '{}' ;
     this. splittedtoekn=this.unsplittedtoekn.split(".");
  
  
     this.currentUser=JSON.parse( atob(this.splittedtoekn[1]));
     console.log(this.currentUser)
     return this.currentUser;
+}
+  ngOnInit(): void {
+    this.gettoken()
       
     
   }

@@ -28,6 +28,8 @@ import { ADMINRoutingModule } from './admin/admin-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductsDisplayComponent } from './user/products-display/products-display.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
 
 
 
@@ -44,7 +46,9 @@ import { CartComponent } from './components/cart/cart.component';
     NavbarComponent,
     CarouselComponent,
     SubnavComponent,
-    CartComponent
+    CartComponent,
+    FooterComponent,SideNavbarComponent,
+  
     
 
    

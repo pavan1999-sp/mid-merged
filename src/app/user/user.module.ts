@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+import { SideNavbarComponent } from '../components/side-navbar/side-navbar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -13,6 +13,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { CartButtonComponent } from './cart-button/cart-button.component';
 import { ItemDisplayComponent } from './item-display/item-display.component';
 import { ProductsDisplayComponent } from './products-display/products-display.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -21,7 +22,7 @@ import { ProductsDisplayComponent } from './products-display/products-display.co
 
 @NgModule({
   declarations: [
-    SideNavbarComponent,
+    
     UserProfileComponent,
     AddressComponent,
     OrdersComponent,
@@ -35,9 +36,9 @@ import { ProductsDisplayComponent } from './products-display/products-display.co
     CommonModule,
     HttpClientModule,
     RouterModule,
-    AngmaterialModule,
+    AngmaterialModule,ReactiveFormsModule,FormsModule,
     NgbModule
   ],providers:[],
-  exports:[SideNavbarComponent,OrdersComponent,UserProfileComponent,TrackingComponent]
+  exports:[OrdersComponent, UserProfileComponent,TrackingComponent]
 })
 export class UserModule { }

@@ -13,16 +13,18 @@ import { AddressComponent } from './user/components/address/address.component';
 import { OrdersComponent } from './user/components/orders/orders.component';
 import { TrackingComponent } from './user/components/tracking/tracking.component';
 import { UserProfileComponent } from './user/components/user-profile/user-profile.component';
+import { ItemDisplayComponent } from './user/item-display/item-display.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:NavbarComponent,
-    children:[
-      {
-        path: '',
-        component: HomepageComponent
-    },
+    component:HomepageComponent,
+     children:[
+  //     {
+  //   //     path: '',
+  //   //     component: 
+  //   // 
+  // },
     {
       path: 'mens',
       component: MensSubpageComponent
@@ -50,7 +52,7 @@ const routes: Routes = [
 
 {
   path: 'profile',
-  component:UserProfileComponent,canActivate:[ProtectRoutesGuard]
+  component:UserProfileComponent
 },
 {
   path: 'order',
@@ -58,6 +60,7 @@ const routes: Routes = [
   children:[{path:"tracking",component:TrackingComponent}
   ]
 }
+
 ];
 
 @NgModule({
