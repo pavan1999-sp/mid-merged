@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideNavbarComponent } from '../components/side-navbar/side-navbar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -13,12 +12,9 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { CartButtonComponent } from './cart-button/cart-button.component';
 import { ItemDisplayComponent } from './item-display/item-display.component';
 import { ProductsDisplayComponent } from './products-display/products-display.component';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentsPostComponent } from './components/comments-post/comments-post.component'; 
 
 @NgModule({
   declarations: [
@@ -28,15 +24,20 @@ import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
     OrdersComponent,
     TrackingComponent,
     CartButtonComponent,
-    ItemDisplayComponent,ProductsDisplayComponent,
-   
-    FilterPipe
+    ItemDisplayComponent,
+    ProductsDisplayComponent,
+    FilterPipe,
+    CommentsComponent,
+    CommentsPostComponent,
+
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     RouterModule,
-    AngmaterialModule,ReactiveFormsModule,FormsModule,
+    AngmaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
     NgbModule
   ],providers:[],
   exports:[OrdersComponent, UserProfileComponent,TrackingComponent]

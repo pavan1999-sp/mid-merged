@@ -26,10 +26,10 @@ import { ErrorInterceptor } from './Interceptors/error.interceptor';
 import { UserRoutingModule } from './user/user-routing.module';
 import { ADMINRoutingModule } from './admin/admin-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ProductsDisplayComponent } from './user/products-display/products-display.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+import { CommentsComponent } from './user/components/comments/comments.component';
 
 
 
@@ -75,7 +75,7 @@ import { SideNavbarComponent } from './components/side-navbar/side-navbar.compon
     {provide:HTTP_INTERCEPTORS,useClass:LoginInterceptor,multi:true},
     {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true}
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [CommentsComponent]
 
 })
 
