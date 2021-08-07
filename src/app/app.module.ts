@@ -75,7 +75,7 @@ import { CommentsComponent } from './user/components/comments/comments.component
     {provide:HTTP_INTERCEPTORS,useClass:LoginInterceptor,multi:true},
     {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true}
   ],
-  bootstrap: [CommentsComponent]
+  bootstrap: [AppComponent]
 
 })
 
