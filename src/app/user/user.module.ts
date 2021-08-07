@@ -14,7 +14,7 @@ import { ItemDisplayComponent } from './item-display/item-display.component';
 import { ProductsDisplayComponent } from './products-display/products-display.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommentsComponent } from './components/comments/comments.component';
-import { CommentsPostComponent } from './components/comments-post/comments-post.component'; 
+import { CommentsPostComponent } from './components/comments-post/comments-post.component';
 
 @NgModule({
   declarations: [
