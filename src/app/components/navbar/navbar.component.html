@@ -1,86 +1,74 @@
-<nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(186, 207, 250); height: 70px;" >
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: rgb(186, 207, 250); height: 70px;">
   <a class="navbar-brand" href="#">easy shoping</a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <div class="collapse navbar-collapse" id="navbarNav">
-
-
-
     <ul class="navbar-nav">
       <li class="nav-item active" class="nav-iconimg">
         <img src="assets\svg\geo-alt-fill.svg" alt=""> hello
         <h4>select your adress</h4>
       </li>
       <li class="nav-item ">
-        <div  >
-  
-          <input  class="search-icon" type="text">
-          <button>search</button> </div>
+        <div>
+          <input class="search-icon" type="text">
+          <button>search</button>
+        </div>
       </li>
       <li class="nav-item ">
-        <div  class="nav-icon">
-          <div  *ngIf="istoken; else loggedOut"  >
-           
+        <div class="nav-icon">
+          <div *ngIf="istoken; else loggedOut">
             <!-- <p class="nav-iconimg"> hello{{currentUser.sub}}</p> -->
             <div class="dropdown">
-              <span  type="button"  data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="nav-iconimg" id="dropdownMenuButton1"  src="assets\svg\person-circle.svg" alt=""> 
+              <span type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="nav-iconimg" id="dropdownMenuButton1" src="assets\svg\person-circle.svg" alt="">
               </span>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#"  (click)="islogout()" >siginout</a></li>
+                <li><a class="dropdown-item" href="#" (click)="islogout()">siginout</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </div>
           </div>
-      
+
           <ng-template #loggedOut>
             <div class="dropdown">
-              <span  type="button"  data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="nav-iconimg" id="dropdownMenuButton1"  src="assets\svg\person-circle.svg" alt=""> 
+              <span type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="nav-iconimg" id="dropdownMenuButton1" src="assets\svg\person-circle.svg" alt="">
               </span>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#"  >signIn</a></li>
+                <li><a class="dropdown-item" href="#">signIn</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </div>
-      
+
             <p [routerLink]="['/login']"> hai Please login.</p>
           </ng-template>
         </div>
       </li>
       <li class="nav-item ">
-        <div  class="nav-iconimg" >
+        <div class="nav-iconimg">
           <img [routerLink]="['/cart']" src="assets\svg\cart-plus.svg" alt="">
         </div>
-  
+
       </li>
-
-      
-
-      
     </ul>
-    
-
-<div>
-
-  
     <div>
-      
-  </div>
-
-</div>
-
-
-
-
-  
+      <div>
+      </div>
     </div>
 
-    
+
+
+
+
+  </div>
+
+
 </nav>
 
 
@@ -140,11 +128,3 @@
 
 
 </mat-toolbar> -->
-
-
-
-
-
-
-
-
